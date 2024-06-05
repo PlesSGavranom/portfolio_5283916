@@ -4,10 +4,10 @@ void main() {
 
   List<String> fruechte = ['Ananas', 'Erdbeere', 'Apfel'];
 
-  fruechte.forEach((frucht){
+  for (var frucht in fruechte) {
     print(frucht);
     print (index);
 
     index = index + 1;
-  });
+  }
 }

@@ -6,7 +6,7 @@ class Auto {
   Auto(this.marke, this.modell, this.baujahr);
 
   void alter(){
-    var alter = 2024 - this.baujahr;
+    var alter = 2024 - baujahr;
 
     print (alter);
   }

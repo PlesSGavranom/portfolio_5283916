@@ -1,7 +1,7 @@
 void main() {
 
   var variabel1 = [1, 2, 3];
-  final variabel2 = 'Hi';
+  const variabel2 = 'Hi';
 
   print (variabel1);
   print (variabel2);

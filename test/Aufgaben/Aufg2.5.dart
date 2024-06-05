@@ -11,13 +11,13 @@ void isolateEntry(SendPort sendPort) async {
   // Verarbeite den Stream
   await for (var number in stream) {
     print('Empfangen: $number');
-    await Future.delayed(Duration(seconds: 1));
+    await Future.delayed(const Duration(seconds: 1));
   }
 }
 
 void main() async {
   // Erstelle den Stream, der fortlaufend Zahlen emittiert
-  Stream<int> numberStream = Stream.periodic(Duration(seconds: 1), (x) => x);
+  Stream<int> numberStream = Stream.periodic(const Duration(seconds: 1), (x) => x);
 
   // Erstelle einen ReceivePort und einen Isolate
   ReceivePort receivePort = ReceivePort();
