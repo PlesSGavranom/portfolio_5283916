@@ -58,23 +58,23 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.cottage),
+            icon: Icon(Icons.cottage, color: Colors.black),
             label: 'Startseite',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.co_present),
+            icon: Icon(Icons.co_present, color: Colors.black),
             label: 'Über mich',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.route),
+            icon: Icon(Icons.route, color: Colors.black),
             label: 'Lebenslauf',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.construction),
+            icon: Icon(Icons.construction, color: Colors.black),
             label: 'Fähigkeiten',
           ),
           BottomNavigationBarItem(
-          icon: Icon(Icons.architecture),
+          icon: Icon(Icons.architecture, color: Colors.black),
           label: 'Projekte',
           ),
         ],
