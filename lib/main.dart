@@ -93,7 +93,7 @@ class Page1 extends StatelessWidget {
       color: Colors.red,
       child: Center(
         child: Text(
-          'Seite 1',
+          'Willkommen auf meiner Startseite!',
           style: TextStyle(fontSize: 24, color: Colors.white),
         ),
       ),
