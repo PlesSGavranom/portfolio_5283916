@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -13,12 +15,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
 
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -38,7 +42,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Portfolio Daniel Stiel'),
+        title: const Text('Portfolio Daniel Stiel'),
       ),
       body: PageView(
         controller: _pageController,
@@ -47,7 +51,7 @@ class _HomePageState extends State<HomePage> {
             _selectedIndex = index;
           });
         },
-        children: <Widget>[
+        children: const <Widget>[
           Page1(),
           Page2(),
           Page3(),
@@ -87,11 +91,13 @@ class _HomePageState extends State<HomePage> {
 }
 
 class Page1 extends StatelessWidget {
+  const Page1({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
       color: Colors.red,
-      child: Center(
+      child: const Center(
         child: Text(
           'Willkommen auf meiner Startseite!',
           style: TextStyle(fontSize: 24, color: Colors.white),
@@ -102,11 +108,13 @@ class Page1 extends StatelessWidget {
 }
 
 class Page2 extends StatelessWidget {
+  const Page2({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
       color: Colors.green,
-      child: Center(
+      child: const Center(
         child: Text(
           'Seite 2',
           style: TextStyle(fontSize: 24, color: Colors.white),
@@ -117,11 +125,13 @@ class Page2 extends StatelessWidget {
 }
 
 class Page3 extends StatelessWidget {
+  const Page3({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
       color: Colors.blue,
-      child: Center(
+      child: const Center(
         child: Text(
           'Seite 3',
           style: TextStyle(fontSize: 24, color: Colors.white),
@@ -132,11 +142,13 @@ class Page3 extends StatelessWidget {
 }
 
 class Page4 extends StatelessWidget {
+  const Page4({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
       color: Colors.yellow,
-      child: Center(
+      child: const Center(
         child: Text(
           'Seite 4',
           style: TextStyle(fontSize: 24, color: Colors.white),
@@ -147,11 +159,13 @@ class Page4 extends StatelessWidget {
 }
 
 class Page5 extends StatelessWidget {
+  const Page5({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
       color: Colors.purple,
-      child: Center(
+      child: const Center(
         child: Text(
           'Seite 5',
           style: TextStyle(fontSize: 24, color: Colors.white),
