@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
 
-class projekterstellung extends StatefulWidget {
+class projekterstellung extends StatelessWidget {
+  const projekterstellung({super.key});
+
   @override
-  State<StatefulWidget> createState() {
-    // TODO: implement createState
-    throw UnimplementedError();
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.red,
+      child: const Center(
+        child: Text(
+          'Willkommen auf meiner Startseite',
+          style: TextStyle(fontSize: 24, color: Colors.white),
+        ),
+      ),
+    );
   }
 }

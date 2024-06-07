@@ -7,8 +7,7 @@ class Page5 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      backgroundColor: Colors.cyanAccent,
+      //appBar: AppBar(title: const Text('Meine Projekte')),
       body: SingleChildScrollView(
           child: Column(
         children: [
@@ -74,14 +73,19 @@ class Page5 extends StatelessWidget {
                 child: Text('Projekt4'),
               ),
             ),
-            onTap: () {},
           ),
         ],
       ),
       ),
+
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: const Icon(Icons.add),
+        backgroundColor: Colors.white,
+        onPressed: (){
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+    return projekterstellung();
+    }));
+    },
+        child: const Icon(Icons.add, color: Colors.white, size: 28),
       ),
     );
   }
