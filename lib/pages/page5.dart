@@ -21,7 +21,7 @@ class Page5 extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
                 border: Border.all(width: 10, color: Colors.deepPurple)
               ),
-              child: Center(
+              child: const Center(
                 child: Text('Projekt1'),
               ),
             ),
@@ -37,7 +37,7 @@ class Page5 extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(width: 10, color: Colors.deepPurple)
               ),
-              child: Center(
+              child: const Center(
                 child: Text('Projekt2'),
               ),
             ),
@@ -53,7 +53,7 @@ class Page5 extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(width: 10, color: Colors.deepPurple)
               ),
-              child: Center(
+              child: const Center(
                 child: Text('Projekt3'),
               ),
             ),
@@ -69,7 +69,7 @@ class Page5 extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(width: 10, color: Colors.deepPurple)
               ),
-              child: Center(
+              child: const Center(
                 child: Text('Projekt4'),
               ),
             ),
@@ -82,7 +82,7 @@ class Page5 extends StatelessWidget {
         backgroundColor: Colors.white,
         onPressed: (){
     Navigator.push(context, MaterialPageRoute(builder: (context) {
-    return projekterstellung();
+    return const projekterstellung();
     }));
     },
         child: const Icon(Icons.add, color: Colors.black, size: 28),
