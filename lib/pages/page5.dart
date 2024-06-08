@@ -1,9 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_5283916/pages/projekterstellung.dart';
 import 'package:portfolio_5283916/util/projekt_tile.dart';
+import 'package:portfolio_5283916/util/projekterstellung_dialog.dart';
 
 class Page5 extends StatelessWidget {
    Page5({super.key});
+
+
+   //Erstellung eines neuen Projekts
+
+   void projekterstellung(){
+     showDialog(
+         context: context,
+         builder: (context){
+       return DialogBox();
+       );
+   }
+   }
+
+   //Liste an Projekten
 
   List projektListe = [
     ["Investment Management mit Python", "Zertifikat"],
@@ -11,6 +25,8 @@ class Page5 extends StatelessWidget {
     ["Investment Management mit Python", "Zertifikat"],
   ];
 
+
+  //Erstellung der Projekt Kacheln
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,11 +45,7 @@ class Page5 extends StatelessWidget {
 
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.white,
-        onPressed: (){
-    Navigator.push(context, MaterialPageRoute(builder: (context) {
-    return const projekterstellung();
-    }));
-    },
+        onPressed: (){},
         child: const Icon(Icons.add, color: Colors.black, size: 28),
       ),
     );
