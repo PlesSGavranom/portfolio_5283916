@@ -85,7 +85,7 @@ class Page5 extends StatelessWidget {
     return projekterstellung();
     }));
     },
-        child: const Icon(Icons.add, color: Colors.white, size: 28),
+        child: const Icon(Icons.add, color: Colors.black, size: 28),
       ),
     );
   }
