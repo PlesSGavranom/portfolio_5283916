@@ -56,7 +56,7 @@ class _HomePageState extends State<HomePage> {
             _selectedIndex = index;
           });
         },
-        children: const <Widget>[
+        children: <Widget>[
           Page1(),
           Page2(),
           Page3(),
