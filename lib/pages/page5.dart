@@ -5,6 +5,8 @@ import 'package:portfolio_5283916/util/projekterstellung_dialog.dart';
 class Page5 extends StatelessWidget {
    Page5({super.key});
 
+ get context => null;
+
 
    //Erstellung eines neuen Projekts
 
@@ -13,8 +15,8 @@ class Page5 extends StatelessWidget {
          context: context,
          builder: (context){
        return DialogBox();
-       );
    }
+     );
    }
 
    //Liste an Projekten
@@ -22,7 +24,7 @@ class Page5 extends StatelessWidget {
   List projektListe = [
     ["Investment Management mit Python", "Zertifikat"],
     ["GUI App", "Projekt"],
-    ["Investment Management mit Python", "Zertifikat"],
+    ["Sentiment mit Python", "Projekt"],
   ];
 
 

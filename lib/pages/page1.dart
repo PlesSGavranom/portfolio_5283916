@@ -9,7 +9,9 @@ class Page1 extends StatelessWidget {
       color: Colors.red,
       child: const Center(
         child: Text(
-          'Willkommen auf meiner Startseite',
+          'Willkommen auf meiner Startseite! \n \n'
+              'Diese App beinhaltet ein Sammelsurium an verschiedenen GUI-Elementen, '
+              'die auf den folgenden Seiten dargestellt und genutzt werden',
           style: TextStyle(fontSize: 24, color: Colors.white),
         ),
       ),
