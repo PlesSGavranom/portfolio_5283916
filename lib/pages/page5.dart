@@ -7,30 +7,6 @@ class Page5 extends StatelessWidget {
 
   final _controller = TextEditingController();
 
-  //Projekt speichern
-
-  // void projektSpeichern(BuildContext context) {
-  //   setState(() {
-  //     projektListe.add(_controller.text);
-  //     _controller.clear();
-  //   });
-  //   Navigator.of(context).pop();
-  // }
-  //
-  // //Erstellung eines neuen Projekts
-  //
-  // void projektErstellung(BuildContext context) {
-  //   showDialog(
-  //       context: context,
-  //       builder: (context) {
-  //         return DialogBox(
-  //           controller: _controller,
-  //           onSave: projektSpeichern,
-  //           onCancel: () => Navigator.of(context).pop(),
-  //         );
-  //       });
-  // }
-
   //Liste an Projekten
 
   List projektListe = [
