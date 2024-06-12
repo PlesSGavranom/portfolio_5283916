@@ -3,46 +3,41 @@ import 'package:portfolio_5283916/util/projekt_tile.dart';
 import 'package:portfolio_5283916/util/projekterstellung_dialog.dart';
 
 class Page5 extends StatelessWidget {
+  Page5({super.key});
 
-   Page5({super.key});
+  final _controller = TextEditingController();
 
-   final _controller = TextEditingController();
+  //Projekt speichern
 
-  get context => null;
+  // void projektSpeichern(BuildContext context) {
+  //   setState(() {
+  //     projektListe.add(_controller.text);
+  //     _controller.clear();
+  //   });
+  //   Navigator.of(context).pop();
+  // }
+  //
+  // //Erstellung eines neuen Projekts
+  //
+  // void projektErstellung(BuildContext context) {
+  //   showDialog(
+  //       context: context,
+  //       builder: (context) {
+  //         return DialogBox(
+  //           controller: _controller,
+  //           onSave: projektSpeichern,
+  //           onCancel: () => Navigator.of(context).pop(),
+  //         );
+  //       });
+  // }
 
-   //Projekt speichern
-
-   void projektspeichern() {
-     setState(() {
-       projektListe.add(_controller.text);
-       _controller.clear();
-     });
-     Navigator.of(context).pop();
-   }
-
-   //Erstellung eines neuen Projekts
-
-   void projekterstellung(){
-     showDialog(
-         context: context,
-         builder: (context){
-       return DialogBox(
-         controller: _controller,
-         onSave: projektspeichern,
-         onCancel: () => Navigator.of(context).pop(),
-       );
-   }
-     );
-   }
-
-   //Liste an Projekten
+  //Liste an Projekten
 
   List projektListe = [
     ["Investment Management mit Python"],
     ["GUI App"],
     ["Sentiment mit Python"],
   ];
-
 
   //Erstellung der Projekt Kacheln
   @override
@@ -53,24 +48,37 @@ class Page5 extends StatelessWidget {
         child: Container(
           decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('Medien/bgbild.png'),
-                fit: BoxFit.cover,
-              )
-          ),
+            image: AssetImage('Medien/bgbild.png'),
+            fit: BoxFit.cover,
+          )),
           child: ListView.builder(
               itemCount: projektListe.length,
               itemBuilder: (context, index) {
                 return ProjektTile(
                   projektnm: projektListe[index][0],
                 );
-            }
-                ),
+              }),
         ),
       ),
-
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.white,
-        onPressed: projekterstellung,
+        onPressed: () {
+          showDialog(
+              context: context,
+              builder: (context) {
+                return DialogBox(
+                  controller: _controller,
+                  onSave: () {
+                    setState(() {
+                      projektListe.add(_controller.text);
+                      _controller.clear();
+                    });
+                    Navigator.of(context).pop();
+                  },
+                  onCancel: () => Navigator.of(context).pop(),
+                );
+              });
+        },
         child: const Icon(Icons.add, color: Colors.black, size: 28),
       ),
     );
