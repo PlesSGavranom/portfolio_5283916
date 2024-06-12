@@ -3,9 +3,8 @@ import 'package:flutter/material.dart';
 class ProjektTile extends StatelessWidget{
 
   final String projektnm;
-  final String projektbes;
 
- ProjektTile({super.key, required this.projektnm, required this.projektbes});
+ ProjektTile({super.key, required this.projektnm});
   @override
   Widget build(BuildContext context){
     return InkWell(
@@ -14,12 +13,14 @@ class ProjektTile extends StatelessWidget{
         width: double.infinity,
         height: 200,
         decoration: BoxDecoration(
-            color: Colors.deepPurpleAccent,
+            color: Colors.deepPurpleAccent.withOpacity(0.5),
             borderRadius: BorderRadius.circular(20),
             border: Border.all(width: 10, color: Colors.deepPurple)
         ),
         child: Center(
-          child: Text(projektnm),
+          child: Text(projektnm,
+            style: TextStyle(fontSize: 22, color: Colors.white),
+            textAlign: TextAlign.center,),
         ),
       ),
       onTap: () {},

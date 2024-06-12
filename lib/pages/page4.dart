@@ -7,11 +7,13 @@ class Page4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.yellow,
+      color: Colors.deepPurpleAccent,
       child: const Center(
         child: Text(
-          'Seite 4',
-          style: TextStyle(fontSize: 24, color: Colors.white),
+          'Ist schon richtig, dass die Seite leer ist ;)',
+          style: TextStyle(fontSize: 24, color: Colors.white,),
+          textAlign: TextAlign.center,
+
         ),
       ),
     );

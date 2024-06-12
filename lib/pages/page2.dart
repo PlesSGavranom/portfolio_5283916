@@ -7,7 +7,12 @@ class Page2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.green,
+      decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('Medien/bgbild.png'),
+            fit: BoxFit.cover,
+          )
+      ),
       padding: EdgeInsets.all(16),
       child: const Column(
         mainAxisAlignment: MainAxisAlignment.center,
