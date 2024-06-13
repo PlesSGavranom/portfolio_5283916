@@ -32,7 +32,10 @@ class Page2 extends StatelessWidget {
             Text(
               'Neben meiner unfassbaren Leidenschaft für das Fach: '
                   '"Entwicklung Grafischer Benutzeroberflächen" verbringe ich '
-                  'viel Zeit mit Counter Strike, Bitchez und Drogen.'
+                  'viel Zeit mit Counter Strike und meiner Arbeit. \n\n'
+                  'Das ganze wird Sie recht wenig interessieren, darum liste'
+                  'ich hier lieber die einzelnen Hürden dieser Programmier'
+                  'aufgabe auf.:'
                   '\n Dabei soll es hier aber nicht enden! ',
               style: TextStyle(fontSize: 16, color: Colors.white),
               textAlign: TextAlign.center,

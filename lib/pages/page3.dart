@@ -8,10 +8,9 @@ class Page3 extends StatelessWidget {
     return Scaffold(
       body: Align(
           alignment: const AlignmentDirectional(0, -1),
-          child: SingleChildScrollView(
             child: ListView(
               shrinkWrap: true,
-              primary: false,
+              primary: true,
               children: [
                 Flexible(
                   child: Container(
@@ -596,7 +595,6 @@ class Page3 extends StatelessWidget {
                 ),
               ],
             ),
-          ),
         ),
       );
   }
