@@ -594,46 +594,6 @@ class Page3 extends StatelessWidget {
                     ],
                   ),
                 ),
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
-                        child: Container(
-                          width: 100,
-                          height: 30,
-                          decoration: BoxDecoration(
-                            boxShadow: const [
-                              BoxShadow(
-                                blurRadius: 4,
-                                color: Color(0x33000000),
-                                offset: Offset(
-                                  0,
-                                  2,
-                                ),
-                              )
-                            ],
-                            borderRadius: BorderRadius.circular(20),
-                            border: Border.all(
-                              color: const Color(0xAC4B39EF),
-                              width: 2,
-                            ),
-                          ),
-                          child: const Align(
-                            alignment: AlignmentDirectional(0, 0),
-                            child: Text(
-                                'Kenntnisse',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold
-                                )
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
               ],
             ),
           ),
