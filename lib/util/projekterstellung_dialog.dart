@@ -18,7 +18,7 @@ class DialogBox extends StatelessWidget{
   Widget build(BuildContext context){
     return AlertDialog(
       backgroundColor: Colors.blue,
-      content: Container(
+      content: SizedBox(
         height: 250,
         width: 350,
         child: Column(
@@ -27,7 +27,7 @@ class DialogBox extends StatelessWidget{
           //User input
           TextField(
             controller: controller,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: "Füge ein Projekt hinzu",
           ),

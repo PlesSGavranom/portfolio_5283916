@@ -13,7 +13,7 @@ class Page2 extends StatelessWidget {
             fit: BoxFit.cover,
           )
       ),
-      padding: EdgeInsets.all(16),
+      padding: const EdgeInsets.all(16),
       child: const Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[

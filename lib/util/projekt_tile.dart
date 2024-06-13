@@ -4,7 +4,7 @@ class ProjektTile extends StatelessWidget{
 
   final String projektnm;
 
- ProjektTile({super.key, required this.projektnm});
+ const ProjektTile({super.key, required this.projektnm});
   @override
   Widget build(BuildContext context){
     return InkWell(
@@ -19,7 +19,7 @@ class ProjektTile extends StatelessWidget{
         ),
         child: Center(
           child: Text(projektnm,
-            style: TextStyle(fontSize: 22, color: Colors.white),
+            style: const TextStyle(fontSize: 22, color: Colors.white),
             textAlign: TextAlign.center,),
         ),
       ),

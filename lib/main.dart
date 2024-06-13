@@ -5,7 +5,6 @@ import 'package:portfolio_5283916/pages/page2.dart';
 import 'package:portfolio_5283916/pages/page3.dart';
 import 'package:portfolio_5283916/pages/page4.dart';
 import 'package:portfolio_5283916/pages/page5.dart';
-import 'Daten/database.dart';
 
 void main()async{
 
@@ -63,7 +62,7 @@ class _HomePageState extends State<HomePage> {
             _selectedIndex = index;
           });
         },
-        children: <Widget>[
+        children: const <Widget>[
           Page1(),
           Page2(),
           Page3(),

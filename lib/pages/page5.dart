@@ -5,7 +5,7 @@ import 'package:portfolio_5283916/util/projekt_tile.dart';
 import 'package:portfolio_5283916/util/projekterstellung_dialog.dart';
 
 class Page5 extends StatefulWidget {
-  Page5({super.key});
+  const Page5({super.key});
 
   @override
   State<Page5> createState() => _Page5State();
