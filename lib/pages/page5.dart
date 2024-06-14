@@ -1,21 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:portfolio_5283916/Daten/database.dart';
 import 'package:portfolio_5283916/util/projekt_tile.dart';
 import 'package:portfolio_5283916/util/projekterstellung_dialog.dart';
 
-class Page5 extends StatelessWidget {
-  Page5({super.key});
+class Page5 extends StatefulWidget {
+  const Page5({super.key});
+
+  @override
+  State<Page5> createState() => _Page5State();
+}
+
+class _Page5State extends State<Page5> {
+
+  final _myBox = Hive.box('meineBox');
+  ProjekteDatenbank db = ProjekteDatenbank();
+
+  void initSate(){
+
+    if(_myBox.get("PROJEKTLISTE") == null){
+      db.erstesDatenladen();
+    } else {
+      db.datenLaden();
+    }
+    super.initState();
+  }
 
   final _controller = TextEditingController();
 
   //Liste an Projekten
-
-  List projektListe = [
-    ["Investment Management mit Python"],
-    ["GUI App"],
-    ["Sentiment mit Python"],
-  ];
-
-  //Erstellung der Projekt Kacheln
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,10 +41,10 @@ class Page5 extends StatelessWidget {
             fit: BoxFit.cover,
           )),
           child: ListView.builder(
-              itemCount: projektListe.length,
+              itemCount: db.projektListe.length,
               itemBuilder: (context, index) {
                 return ProjektTile(
-                  projektnm: projektListe[index][0],
+                  projektnm: db.projektListe[index],
                 );
               }),
         ),
@@ -46,9 +59,10 @@ class Page5 extends StatelessWidget {
                   controller: _controller,
                   onSave: () {
                     setState(() {
-                      projektListe.add(_controller.text);
+                      db.projektListe.add(_controller.text);
                       _controller.clear();
                     });
+                    db.datenUpdaten();
                     Navigator.of(context).pop();
                   },
                   onCancel: () => Navigator.of(context).pop(),
@@ -59,6 +73,4 @@ class Page5 extends StatelessWidget {
       ),
     );
   }
-
-  void setState(Null Function() param0) {}
 }

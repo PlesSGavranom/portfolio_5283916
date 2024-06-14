@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:portfolio_5283916/pages/page1.dart';
 import 'package:portfolio_5283916/pages/page2.dart';
 import 'package:portfolio_5283916/pages/page3.dart';
 import 'package:portfolio_5283916/pages/page4.dart';
 import 'package:portfolio_5283916/pages/page5.dart';
 
-void main() {
+void main()async{
+
+  await Hive.initFlutter();
+  var box = await Hive.openBox('meineBox');
+
   runApp(const MyApp());
 }
 
@@ -33,6 +38,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
   final PageController _pageController = PageController();
   int _selectedIndex = 0;
 
@@ -56,7 +62,7 @@ class _HomePageState extends State<HomePage> {
             _selectedIndex = index;
           });
         },
-        children: <Widget>[
+        children: const <Widget>[
           Page1(),
           Page2(),
           Page3(),

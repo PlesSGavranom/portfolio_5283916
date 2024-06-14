@@ -17,8 +17,8 @@ class DialogBox extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return AlertDialog(
-      backgroundColor: Colors.blue,
-      content: Container(
+      backgroundColor: Colors.purpleAccent,
+      content: SizedBox(
         height: 250,
         width: 350,
         child: Column(
@@ -27,7 +27,7 @@ class DialogBox extends StatelessWidget{
           //User input
           TextField(
             controller: controller,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: "Füge ein Projekt hinzu",
           ),
@@ -36,10 +36,19 @@ class DialogBox extends StatelessWidget{
           Row(
             children: [
               //speichern
-              meinKnopf(text: "Speichern", onPressed: onSave),
-              const SizedBox(width: 8,),
+              Container(decoration:
+              BoxDecoration(
+                  border: Border.all(width: 2),
+                  borderRadius: BorderRadius.circular(6)),
+
+                  child: meinKnopf(text: "Speichern", onPressed: onSave)),
+              const SizedBox(width: 80,),
               //abbrechen
-              meinKnopf(text: "Abbrechen", onPressed: onCancel)
+              Container(decoration:
+              BoxDecoration(
+                  border: Border.all(width: 2),
+                  borderRadius: BorderRadius.circular(6)),
+                  child: meinKnopf(text: "Abbrechen", onPressed: onCancel))
             ],
           )
     ],
